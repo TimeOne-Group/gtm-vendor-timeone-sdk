@@ -14,6 +14,7 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "TimeOne - SDK",
+  "categories": ["AFFILIATE_MARKETING"],
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
