@@ -55,7 +55,7 @@ const setInWindow = require('setInWindow');
 
 setInWindow("__ISDK_progid", data.progid, true);
 
-const url = "https://cdn.jsdelivr.net/gh/TimeOne-Group/isdk@main/dist/isdk.min.js";
+const url = "https://cdn.jsdelivr.net/gh/TimeOne-Group/isdk@latest/dist/isdk.min.js";
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure, url);
 
 
@@ -137,7 +137,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "string": "https://cdn.jsdelivr.net/gh/TimeOne-Group/isdk@main/dist/isdk.min.js"
+                "string": "https://cdn.jsdelivr.net/gh/TimeOne-Group/isdk@latest/dist/isdk.min.js"
               }
             ]
           }
