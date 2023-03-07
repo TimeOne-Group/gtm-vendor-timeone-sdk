@@ -1,6 +1,8 @@
 homepage: ​"www.timeonegroup.com"​,
 documentation: ​"https://github.com/TimeOne-Group/gtm-vendor-timeone-sdk/blob/main/docs/install.md"​,
 versions:
+  - sha: 6f107defa9ff09e18aa1d9bb674af4157bef9ab9
+    changeNotes: ajoute configuration wildcard domaine
   - sha: 775dd26fb28ff24ee195f897232b355e2cd3b7d1
     changeNotes: modifie url du sdk
   - sha: 9fa57ea5fac0f06eafeabab7fb1e54beeb0945d6
