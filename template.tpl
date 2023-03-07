@@ -44,6 +44,29 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "help": "Ce paramètre est obligatoire. Il correspond à l\u0027identifiant de votre campagne. Il vous est communiqué par l\u0027équipe TimeOne."
+  },
+  {
+    "type": "RADIO",
+    "name": "wildcard-domain",
+    "displayName": "Domaine wildcard",
+    "radioItems": [
+      {
+        "value": "false",
+        "displayValue": "Off"
+      },
+      {
+        "value": "true",
+        "displayValue": "On"
+      }
+    ],
+    "defaultValue": "false",
+    "simpleValueType": true,
+    "help": "Ce paramètre est obligatoire. Il permet de poser les cookies sur le domaine wildcard.",
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ]
   }
 ]
 
@@ -54,6 +77,7 @@ const injectScript = require('injectScript');
 const setInWindow = require('setInWindow');
 
 setInWindow("__ISDK_progid", data.progid, true);
+setInWindow("__ISDK_wildcard_domain", data["wildcard-domain"], true);
 
 const url = "https://cdn.jsdelivr.net/gh/TimeOne-Group/isdk@latest/dist/isdk.min.js";
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure, url);
@@ -98,6 +122,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "__ISDK_progid"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "__ISDK_wildcard_domain"
                   },
                   {
                     "type": 8,
